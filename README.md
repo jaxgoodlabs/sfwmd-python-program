@@ -1,31 +1,32 @@
 # Final Report: Optimizing Coverage of Hunting Areas for Maximum Removal of Burmese pythons in South Florida
 ## 94-881 Managing Analytics Projects (Spring 2020)
 Alice Beattie, Taylor Burandt, Patrick Campbell
+
 March 4, 2020
 
 ### Table of Contents
 Executive Summary
-Problem Framing
-Data Exploration
-Data Variable Selection
-Data Source Selection
-Data Source Analysis
-Data Integration
-Analysis Choices and Justification
-Generalized Linear Model Regression
-Optimization
-Visualizing and Communicating the Analytics
-Geospatial Analysis
-Project Plan
-Stages, Milestones, and Deliverables
-Stakeholder Analysis
-Hardware and Software Resources
-Staffing Requirements
-Risk Management
-Success Measurements
-Lessons Learned
-Limitations and Future Research
-Next Steps
+1. [Problem Framing](#1-problem-framing)
+2. Data Exploration
+  a. Data Variable Selection
+  b. Data Source Selection
+  c. Data Source Analysis
+  d. Data Integration
+3. Analysis Choices and Justification
+  a. Generalized Linear Model Regression
+  b. Optimization
+4. Visualizing and Communicating the Analytics
+  a. Geospatial Analysis
+5. Project Plan
+  a. Stages, Milestones, and Deliverables
+  b. Stakeholder Analysis
+  c. Hardware and Software Resources
+  d. Staffing Requirements
+  e. Risk Management
+6. Success Measurements
+7. Lessons Learned
+8. Limitations and Future Research
+9. Next Steps
 Bibliography
 
 ### Executive Summary
