@@ -146,32 +146,23 @@ Running separate analyses on the two data sets and then synthesizing our finding
 
 The following steps were taken to clean the data:
 1. Eliminating extraneous attributes and records
-  a. The Survey123 data contains data fields that are irrelevant to our analysis (e.g., “take another picture,” “creation date,” “creator,” “drop-off site,” etc.). Removing these simplifies the data exploration process and analysis. 
-
-Likewise, the data included several records for other species of exotics, including Boa constrictors, ball pythons, and others. These records were all excluded. 
-
+- The Survey123 data contains data fields that are irrelevant to our analysis (e.g., “take another picture,” “creation date,” “creator,” “drop-off site,” etc.). Removing these simplifies the data exploration process and analysis. 
+- Likewise, the data included several records for other species of exotics, including Boa constrictors, ball pythons, and others. These records were all excluded. 
 2. Renaming column headers for easy reference in R (e.g., “Date Caught” changed to “Date_Caught”, etc.)
-  a. Standardizing NA entries
-> Different fields used different conventions for identifying null or missing values. In the Survey123 data, for example, “No submitter” was used for the SubmitterName field to indicate that no submitter was specified for the record. In order to more easily recognize null and missing data, we replaced all such entries with the text “NA.”
-
-  b. Removing and/or recoding NAs to preserve integrity of summary statistics and other analyses
-> While removing NAs isn’t always the best strategy for dealing with missing data, it turned out to be adequate for the purposes of our analysis. Because of how the data was collected (namely, through manual inputs into a mobile app, which pre-specified each field as either required or not required), it didn’t seem appropriate to read any further into missing fields or attempt to recode them in any way.  
-
-  c. Combine separated fields
-> E.g., the Survey123 data contained fields that separated the foot and inches components of the snake’s length measurement, as well as a third field for the total measurement measured in feet. We consolidated these three fields into a single field for total length measured in inches. 
-  
-  d. Separate combined fields 
-> E.g., the Survey123 data contained fields that combined the date and time of each capture. For the purposes of our analysis, we found it more useful to separate these into distinct time and date fields.
-  
-  e. Change/standardize field formats 
-> E.g., changing time formats to a standard 24:00 format to eliminate ambiguities between AM and PM entries
-  
-  f. Convert numeric fields from text to numeric format 
-> E.g., the Survey123 data contained a field for “temperature at time of capture,” which was recorded in text format (e.g., “seventies” instead of “70-79”). In cases like this, we found it useful to convert these fields to a numeric format.
-
-  g. Resolve inconsistencies and errors in data
->E.g., the Survey123 data contains records in which there is a “capture date” recorded but no python captured. 
-Same identifier (Object ID) used for multiple entries
+3. Standardizing NA entries
+- Different fields used different conventions for identifying null or missing values. In the Survey123 data, for example, “No submitter” was used for the SubmitterName field to indicate that no submitter was specified for the record. In order to more easily recognize null and missing data, we replaced all such entries with the text “NA.”
+- Removing and/or recoding NAs to preserve integrity of summary statistics and other analyses. While removing NAs isn’t always the best strategy for dealing with missing data, it turned out to be adequate for the purposes of our analysis. Because of how the data was collected (namely, through manual inputs into a mobile app, which pre-specified each field as either required or not required), it didn’t seem appropriate to read any further into missing fields or attempt to recode them in any way.  
+4. Combine separated fields
+- E.g., the Survey123 data contained fields that separated the foot and inches components of the snake’s length measurement, as well as a third field for the total measurement measured in feet. We consolidated these three fields into a single field for total length measured in inches. 
+5. Separate combined fields 
+ - E.g., the Survey123 data contained fields that combined the date and time of each capture. For the purposes of our analysis, we found it more useful to separate these into distinct time and date fields.
+6. Change/standardize field formats 
+- E.g., changing time formats to a standard 24:00 format to eliminate ambiguities between AM and PM entries
+7. Convert numeric fields from text to numeric format 
+- E.g., the Survey123 data contained a field for “temperature at time of capture,” which was recorded in text format (e.g., “seventies” instead of “70-79”). In cases like this, we found it useful to convert these fields to a numeric format.
+8. Resolve inconsistencies and errors in data
+- E.g., the Survey123 data contains records in which there is a “capture date” recorded but no python captured. 
+- Same identifier (Object ID) used for multiple entries
 
 ## 3. Analysis Choices and Justification
 
