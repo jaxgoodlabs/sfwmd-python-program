@@ -11,7 +11,7 @@ March 4, 2020
 3. [Analysis Choices and Justification](#3-analysis-choices-and-justification)
 4. [Visualizing and Communicating the Analytics](#4-visualizing-and-communicating-the-analytics)
 5. [Project Plan](#5-project-plan)
-6. [Success Measurements](#6-success-measurements)
+6. [Success Measurements and Project Impact](#6-success-measurements-and-project-impact)
 7. [Lessons Learned](#7-lessons-learned)
 8. [Limitations and Future Research](#8-limitations-and-future-research)
 
