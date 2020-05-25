@@ -10,10 +10,10 @@ March 4, 2020
 2. [Data Exploration](#2-data-exploration)
 3. [Analysis Choices and Justification](#3-analysis-choices-and-justification)
 4. [Visualizing and Communicating the Analytics](#4-visualizing-and-communicating-the-analytics)
-5. [Project Plan](#project-plan)
-6. [Success Measurements](#success-measurements)
-7. [Lessons Learned](#lessons-learned)
-8. [Limitations and Future Research](#limitations-and-future-research)
+5. [Project Plan](#5-project-plan)
+6. [Success Measurements](#6-success-measurements)
+7. [Lessons Learned](#7-lessons-learned)
+8. [Limitations and Future Research](#8-limitations-and-future-research)
 
 [Bibliography](#bibliography)
 
