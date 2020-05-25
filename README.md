@@ -79,8 +79,8 @@ DBHYDRO water level data (csv)
 NOAA temperature & precipitation data for weather stations throughout Florida over the reporting period (csv) 
 
 *Figure 1. Weather stations in South Florida*
-<p align="center">
-<img width="60%" height="60%" src="https://user-images.githubusercontent.com/32546509/82825276-f1e80400-9e78-11ea-8968-a4bbfa9f4b73.JPG">
+<p align="left">
+<img width="50%" height="50%" src="https://user-images.githubusercontent.com/32546509/82825276-f1e80400-9e78-11ea-8968-a4bbfa9f4b73.JPG">
 </p>
 
 ### 2.3 Data Source Analysis
