@@ -5,29 +5,17 @@ Alice Beattie, Taylor Burandt, Patrick Campbell
 March 4, 2020
 
 ### Table of Contents
-Executive Summary
+[Executive Summary](#executive-summary)
 1. [Problem Framing](#1-problem-framing)
-2. Data Exploration
-  a. Data Variable Selection
-  b. Data Source Selection
-  c. Data Source Analysis
-  d. Data Integration
-3. Analysis Choices and Justification
-  a. Generalized Linear Model Regression
-  b. Optimization
-4. Visualizing and Communicating the Analytics
-  a. Geospatial Analysis
-5. Project Plan
-  a. Stages, Milestones, and Deliverables
-  b. Stakeholder Analysis
-  c. Hardware and Software Resources
-  d. Staffing Requirements
-  e. Risk Management
-6. Success Measurements
-7. Lessons Learned
-8. Limitations and Future Research
-9. Next Steps
-Bibliography
+2. [Data Exploration]()#2-data-exploration)
+3. [Analysis Choices and Justification](#3-analysis-choices-and-justification)
+4. [Visualizing and Communicating the Analytics](#4-visualizing-and-communication-the-analytics)
+5. [Project Plan](#project-plan)
+6. [Success Measurements](#success-measurements)
+7. [Lessons Learned](#lessons-learned)
+8. [Limitations and Future Research](#limitations-and-future-research)
+9. [Next Steps](#9-next-steps)
+[Bibliography](#bibliography)
 
 ### Executive Summary
 
