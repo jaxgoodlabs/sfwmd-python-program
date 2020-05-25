@@ -26,8 +26,11 @@ In a future stage of the program, managers want to transition to a dispatch mode
 ## 1. Problem Framing
 
 The framing of the problem was done in three parts: decision to be improved, decisionmaker, and the value of the improved decision. 
+
 **Decision to be improved:** How should the project manager dispatch 25 hunters in time and space throughout the project coverage area to maximize the expected catch of Burmese pythons (in a measurement of snake-feet) on a given day?
+
 **Decisionmaker:** Project manager for SFWMD Burmese python elimination program 
+
 **Value of Improved Decision:** The value of improving this decision includes the following outcomes:
 - Quantitative
   - Increase in the number of Burmese pythons removed on average each year
