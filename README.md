@@ -7,7 +7,7 @@ March 4, 2020
 ### Table of Contents
 [Executive Summary](#executive-summary)
 1. [Problem Framing](#1-problem-framing)
-2. [Data Exploration]()#2-data-exploration)
+2. [Data Exploration](#2-data-exploration)
 3. [Analysis Choices and Justification](#3-analysis-choices-and-justification)
 4. [Visualizing and Communicating the Analytics](#4-visualizing-and-communication-the-analytics)
 5. [Project Plan](#project-plan)
@@ -15,6 +15,7 @@ March 4, 2020
 7. [Lessons Learned](#lessons-learned)
 8. [Limitations and Future Research](#limitations-and-future-research)
 9. [Next Steps](#9-next-steps)
+
 [Bibliography](#bibliography)
 
 ### Executive Summary
@@ -40,9 +41,9 @@ The framing of the problem was done in three parts: decision to be improved, dec
 
 *Hypothesis:* By providing program managers with a model of how to allocate its 25 hunters across the program coverage area in order to optimize expected value, we can help improve the program’s effectiveness in terms of total number and biomass of pythons removed; more evenly distribute risks and opportunity among hunters, resulting in more uniform per unit effort earning across the team; decrease the number and frequency of conflicts between hunters due to territorial disputes and bottlenecks; and improve the health of native wildlife and ecosystems.
 
-## 3. Data Exploration
+## 2. Data Exploration
 
-### 3.1 Data Variable Selection
+### 2.1 Data Variable Selection
 
 The next phase of project development is the exploration of data. Before any data was received, the following variables were identified as essential and/or important to the analysis and future implementation of the hypothesis:
 
@@ -65,7 +66,7 @@ The next phase of project development is the exploration of data. Before any dat
   i. Water levels across hunting areas
 
 
-### 3.2 Data Source Selection
+### 2.2 Data Source Selection
 
 Through the identification of the variables and discussions with stakeholders at SFWMD, the following datasets and sources were identified: 
 
@@ -77,7 +78,7 @@ NOAA temperature & precipitation data for weather stations throughout Florida ov
 
 *Figure 1. Weather stations in South Florida*
 
-### 3.3 Data Source Analysis
+### 2.3 Data Source Analysis
 
 #### A. SFWMD hunter data and SFWMD Survey123 data
 
@@ -124,7 +125,7 @@ This data contains the shapefiles of South Florida. These shapefiles being pre-m
 
 The DBHYDRO database contains valuable environmental data collected routinely by the SFWMD. For our purposes, we were interested primarily in the rain gauge and water level (stage) data for all monitoring stations within the project coverage area, as these have the most direct impact on the snakes’ and hunters’ behavior. Unfortunately, these data are organized by station names and codes that we are unfamiliar with, making it difficult to query. As of the preparation of this report, we were still working out the best way to identify the data that corresponded to our desired area. The strategy we are currently exploring is using the monitoring station map and index provided here along with the maps of the project area to filter the relevant station names, then using these names in our query to return the desired rows. The results of this process, if successful, will be incorporated into all future products. 
 
-### 3.4 Data Integration
+### 2.4 Data Integration
 
 The data sources used for this analysis includes data in both CSV and SHP (shapefile) formats. All of the CSV data sets will be joined in R using a combination of primary keys (when available) and unique attribute sets (e.g., date, time, and location of capture). After processing, all CSV data will be imported into ArcGIS Pro and mapped onto the program coverage area using the data’s latitude and longitude fields. 
 
@@ -167,7 +168,7 @@ Likewise, the data included several records for other species of exotics, includ
 >E.g., the Survey123 data contains records in which there is a “capture date” recorded but no python captured. 
 Same identifier (Object ID) used for multiple entries
 
-## 4. Analysis Choices and Justification
+## 3. Analysis Choices and Justification
 
 In order to address the problem, it was divided into three sub-problems that could be approached by different analytical methods. The sub-problems are as follows:
 
@@ -179,7 +180,7 @@ Problem 3: How to communicate results of model outputs to be effective and valua
 
 Because the analysis is based on a specific target variable of interest (snake-feet) and historical data, supervised learning methods are most appropriate for this project to improve hunter dispatching decisions. This project comprises two main analytic problem types: prediction and optimization, both of which are built on initial geospatial analysis of existing data and will be visualized using geospatial analysis. Below is more detail on the specific models.
 
-### 4.1 Generalized Linear Model 
+### 3.1 Generalized Linear Model 
 
 Predict EV of target variable “snake-feet” based on environmental factors such as location, temperature, time of day, and cloud cover.
 A Generalized Linear Model (GLM) was selected to analyze the data because the goal is to understand the relationship between snake size and the multiple factors that needed to be incorporated into the analysis in order to make an accurate prediction (see above).  A GLM is more appropriate for this data because the features and outcome variable can be connected using a non-linear function, which is more helpful than simpler models which assume linearity and a normal distribution of error terms. 
@@ -194,7 +195,7 @@ Two other areas of concern when using regression in this case is overfitting and
 
 In regard to collinearity, variables such as cloud cover and temperature may not be independent of one another, causing the model to be inaccurate. This will have to be analyzed during testing and coefficients may be eliminated depending upon initial findings. Lastly, a final form of inaccuracy that may come from the model is an inference error if this model does make incorrect predictions. 
 
-### 4.2 Optimization
+### 3.2 Optimization
 
 Deterministic (linear programming [LP]) optimization (based on the expected value of target variable, deciding if and how many hunters to send.)
 
@@ -202,9 +203,9 @@ In addition to doing a regression, an LP optimization will take the findings and
 
 Although this can be done manually with the current data set with a small amount of a time commitment, that is not the intent long-term. Developing an automated process between this and the other functions would be important, but would require a large amount of technical, coding skill. Ideally, once running successfully it would not need consistent maintenance. 
 
-## 5. Visualizing and Communicating the Analytics
+## 4. Visualizing and Communicating the Analytics
 
-### 5.1 Geospatial Analysis
+### 4.1 Geospatial Analysis
 
 ArcGIS Geospatial analysis (Spatial join to classify existing python capture data into grid cells.)
 
@@ -259,9 +260,9 @@ Filtering the results by whether the snake captured was a gravid female, as we d
 <img width="100%" height="100%" src="https://user-images.githubusercontent.com/32546509/80058940-9aace780-84f8-11ea-9ba3-8e4d9f8e023c.JPG">
 </p>
 
-## 6. Project Plan
+## 5. Project Plan
 
-### 6.1 Stages, Milestones, and Deliverables
+### 5.1 Stages, Milestones, and Deliverables
 
 The ten week long project will consist of five phases as explained in the previous pages: (1) question and scope formulation; (2) data exploration; (3) modeling; (4) interpretation and findings; and (5) communication of results and recommendations. The following describes the milestones and deliverables associated with each stage:
 
@@ -328,7 +329,7 @@ The ten week long project will consist of five phases as explained in the previo
 - Final report
 - Final models
 
-### 6.2 Stakeholder Analysis
+### 5.2 Stakeholder Analysis
 
 Below are all of the stakeholders associated with the project and their expected impact and communication frequency:
 
@@ -363,7 +364,7 @@ Low
 Bi-weekly phone call
 Project manager
 
-### 6.3 Hardware and Software Resources
+### 5.3 Hardware and Software Resources
 
 *Hardware and costs*
 
@@ -378,15 +379,15 @@ Project manager
 - Open source python editor (e.g., PyCharm): free
 - ESRI Tracker application: no additional cost (existing)
 
-### 6.4 Staffing Requirements
+### 5.4 Staffing Requirements
 
 The following are the anticipated staffing requirements for the duration of the ten week project:
 
-### 6.6 Risk Management
+### 5.5 Risk Management
 
 Below are the anticipated risks associated with the project. The scale is as follows: Likelihood Level and Severity: 1 = High, 2 = Medium, 3 = Low
 
-## 7. Success Measurements and Project Impact
+## 6. Success Measurements and Project Impact
 
 Our model is designed to improve the SFWMD’s invasive species management efforts in and around Everglades and Big Cypress National Parks. The impact of our solution will therefore be measured largely in terms of how well it helps to control the size and spread of the Burmese python population within the project coverage area. Relevant metrics for measuring this impact include:
 
@@ -408,14 +409,14 @@ The criteria for determining when the project is complete include:
 - Model performance (predictive accuracy, quality of recommendations): significantly better than previous solution over a reasonable time horizon, as measured by an increase in total snake feet removed (greater than 8,340 as caught in the previous year). Detection rates using traditional methods (including baited traps, dogs, and visual survey) are estimated to be less than 1%, and this tool doesn’t do anything specifically to improve that rate. However, by directing hunters to the most population dense and active hunting locations within the coverage area, the expected catch should still be significantly higher than that achieved by the current method.
 - Client satisfaction: measured by decision-makers’ degree of adherence (at least 80% adherence) to model’s recommendations and renewal of contract (if required)
 
-## 8. Lessons Learned
+## 7. Lessons Learned
 
 During the course of this investigation, we learned the following lessons:
 
 A staff with a diverse set of skills is essential to this project, and likely many others. Without the varying skills this project would not be successful. (As demonstrated by this team’s lack of analytics and/or programming skills.) 
 Stakeholders have the capability to make the best analytics projects unsuccessful due to unwillingness to implement. Especially in this project, the python hunters held the most influence in that they would choose not to use the recommendations. This stressed the importance of including stakeholders consistently throughout all stages of a project.
 
-## 9. Limitations and Future Research
+## 8. Limitations and Future Research
 
 The District probably needs to clean up its data management protocol. Three years in, the data is still spread out across 4 separate Excel files all of which used different attributes and data collection protocols (due to updates in the Survey123 e-form). No metadata is provided to explain these features of the datasets, and a number of confusing conventions have been applied for various ad hoc purposes (e.g., color coding, filtering, etc.). There is also no paper trail to refer to if the data files become corrupted, which doesn’t seem particularly improbable.
 
